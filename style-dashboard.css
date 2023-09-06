@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+:root{
+    /* Color */
+    --body-color: #FFFFFF;
+    --body-color-2: #F8F8F8;
+    --primary-color-light:#F6F6F6;
+    --hijau-color: #00B24C;
+    --biru-color: #5A94F5;
+    --merah-color: #B22020;
+    --shadow-color: rgba(0, 0, 0, 0.25);
+    --text-color: #181818;
+    --hitam-color: #000000;
+
+    /* transition */
+    --tran-01: all 0.1s ease;
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+
+
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background: var(--biru-color);
+    transition: var(--tran-04);
+}
+.logout{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.logout a{
+    padding: 10px 50px;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--body-color);
+}
+h1{
+    margin-top: 30px;
+    text-align: center;
+    color: var(--body-color);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+    background-color: var(--body-color-2);
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 100px 100px 0px 0px;
+    box-shadow: 0px 4px 4px 4px var(--shadow-color);
+}
+.card-saldo{
+    margin-top: -130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    padding: 27px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px 0px var(--shadow-color);
+    background-color: var(--body-color);
+}
+.saldo-atas{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+}
+.income{
+    width: 100%;
+    background-color: var(--hijau-color);
+    padding: 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    color: var(--body-color);
+}
+.income p{
+    font-size: 16px;
+}
+.income span{
+    display: block; 
+    font-size: 40px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.used{
+    width: 50%;
+    box-shadow: 0px 4px 4px 0px var(--shadow-color) inset;
+    border-radius: 30px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--hitam-color);
+}
+.used p{
+    font-size: 12px;
+}
+.used span{
+    font-size: 24px;
+}
+form{
+    width: 100%;
+}
+.form-group{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.ket{
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+}
+textarea{
+    padding: 10px;
+    resize: none;
+    width: 100%;
+    border: 3px solid var(--biru-color);
+    border: none;
+    border-bottom: 1px solid var(--biru-color);
+}
+textarea:focus{
+    outline: none;
+    box-shadow: 0 2px 4px #6d9ff5af;
+}
+.popup form input{
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid var(--biru-color);
+}
+.popup form input:focus{
+    outline: none;
+    box-shadow: 0 2px 4px #6d9ff5af;
+}
+.popup form select{
+    text-align: center;
+    width: 50%;
+    border: 3px solid var(--biru-color);
+    border: none;
+    border-bottom: 1px solid var(--biru-color);
+}
+.popup form select:focus{
+    outline: none;
+    box-shadow: 0 2px 4px #6d9ff5af;
+}
+.action-saldo{
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.action-saldo button{
+    border: none;
+    color: var(--body-color);
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px 20px;
+}
+.popup .action-saldo {
+    margin-top: 10px;
+}
+#pemasukan{
+    background-color: var(--hijau-color);
+}
+#pengeluaran{
+    background-color: var(--merah-color);
+}
+.action-saldo #showPopupButton{
+    background-color: var(--biru-color);
+}
+
+@media screen and (max-width: 1027px){
+    .saldo-atas{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .used{
+        width: 100%;
+        padding: 20px;
+    }
+    .income span{
+        font-size: 5vw;
+    }
+    .used span{
+        font-size: 3vw;
+    }
+    .action-saldo{
+        display: flex;
+    }
+    .action-saldo button{
+        font-size: 3vw;
+    }
+
+
+}
+@media screen and (max-width: 760px){
+    .action-saldo{
+        flex-direction: column;
+        width: 80%;
+        text-align: center;
+    }
+    .popup .action-saldo {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .popup form input{
+        width: 100%;
+        padding: 8px;
+    }
+}
+@media screen and (max-width: 500px){
+    .container{
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 50px 50px 0px 0px;
+    }
+    .card-saldo{
+        width: 95%;
+    }
+    .income span{
+        font-size: 7vw;
+    }
+    .used span{
+        font-size: 5vw;
+    }
+    .action-saldo a{
+        font-size: 4vw;
+    }
+    .logout span{
+        padding: 10px 30px;
+    }
+}
+
+/* .rincian-container{
+    margin-top: 40px;
+    width: 70%;
+    background-color: var(--hijau-color);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px ;
+    border-radius: 10px;
+}
+.rincian{
+    color: var(--hijau-color);
+    border-radius: 50px;
+    text-align: center;
+    width: 100%;
+    background-color: var(--body-color);
+    padding: 1px;
+    box-shadow: 0px 4px 4px 0px var(--shadow-color) ;
+}
+
+@media screen and (max-width: 760px){
+    .rincian-container{
+        width: 95%;
+        align-items: center;
+        border-radius: 40px;
+    }
+    .rincian{
+        font-size: 3vw;
+        border-radius: 30px;
+    }
+    
+} */
+
+
+.saldo-table-container {
+    margin-top: 50px;
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    justify-content: start;
+    background-color: var(--body-color);
+    box-shadow: 0px 4px 4px 0px var(--shadow-color);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 200px;
+}
+.icon{
+    font-size: 25px;
+}
+.saldo-table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap; /* Hindari pemisahan kata dalam sel */
+}
+
+.saldo-table th,
+.saldo-table td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 3px solid var(--primary-color-light);
+    white-space: normal;
+}
+.saldo-table td{
+    text-align: start;
+}
+
+/* Atur warna latar belakang untuk baris ganjil */
+.saldo-table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+/* Tambahkan CSS untuk sel dengan class "positive" dan "negative" */
+.saldo-table .positive {
+    color: var(--hijau-color);
+}
+
+.saldo-table .negative {
+    color: var(--merah-color);
+}
+
+/* Tambahkan CSS untuk elemen select */
+.saldo-table select {
+    width: 100%;
+}
+
+.saldo-table select{
+    text-align: center;
+    width: 70%;
+    height: 40px;
+    border-radius: 20px;
+    border: 5px solid var(--primary-color-light);
+    font-weight: 700;
+}
+.saldo-table select:focus{
+    outline: none;
+    border: 3px solid var(--hijau-color);
+    box-shadow: 0 2px 4px var(--hijau-color);
+}
+@media screen and (max-width: 760px){
+    .saldo-table select{
+        width: 100%;
+    }
+
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+.popup-judul{
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.popup p{
+    margin-top: 20px;
+}
+.popup-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--body-color);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 50%;
+    max-width: 80%; /* Lebar maksimum popup */
+    max-height: 80%; /* Tinggi maksimum popup */
+    overflow: auto; /* Tampilkan scrollbar jika kontennya terlalu besar */
+}
+
+.closePopup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Tambahkan gaya responsif */
+@media (max-width: 800px) {
+    .popup-content {
+        width: 100%;
+    }
+    .popup-judul{
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+@media (max-width: 768px) {
+    .popup-content {
+        width: 100%;
+        max-width: 90%;
+        max-height: 90%;
+    }
+    .popup-judul{
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
