@@ -1,4 +1,4 @@
-# Web-catat-pengeluaran
+# Web Catat Pengeluaran & Pemasukan Keuangan
 unfinished web project. but you can see the progress preview in link bellow this text
 
 # Preview Web
@@ -6,5 +6,8 @@ unfinished web project. but you can see the progress preview in link bellow this
 
 # Progress 1
 ![preview-progress](https://github.com/saka-C/layout-navbar-footer/assets/111035568/3df65ee3-7767-4236-a4f4-88b9dde8234d)
+
+# Progress 2
+![image](https://github.com/saka-C/Web-catat-pengeluaran/assets/111035568/65324dc9-9566-4759-83dc-5b99c6905595)
 
 
