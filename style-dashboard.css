@@ -561,6 +561,7 @@ textarea:focus{
     background: transparent;
     border: none;
     text-decoration: underline;
+    cursor: pointer;
 }
 .action-td #edit{
     color: var(--biru-color);
