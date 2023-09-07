@@ -31,10 +31,18 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+.body-blue{
+    position: absolute;
+    z-index: -999;
+    width: 100%;
+    height: 100%;
+    background: var(--biru-color);
+}
+.body-blue p{
+    opacity: 0;
+}
 body{
     height: 100vh;
-    background: var(--biru-color);
     transition: var(--tran-04);
 }
 .logout{
@@ -43,7 +51,8 @@ body{
     align-items: center;
 }
 .logout a{
-    padding: 10px 50px;
+    padding: 5px;
+    margin-right: 20px;
     font-size: 30px;
     font-weight: 700;
     color: var(--body-color);
@@ -120,9 +129,13 @@ h1{
 }
 form{
     width: 100%;
+    color: var(--body-color);
 }
+
 .form-group{
     display: flex;
+    flex-direction: column;
+    align-items: start;
     justify-content: center;
     gap: 10px;
     margin-bottom: 10px;
@@ -136,39 +149,38 @@ textarea{
     padding: 10px;
     resize: none;
     width: 100%;
-    border: 3px solid var(--biru-color);
     border: none;
-    border-bottom: 1px solid var(--biru-color);
+    border-radius: 10px;
 }
 textarea:focus{
     outline: none;
-    box-shadow: 0 2px 4px #6d9ff5af;
 }
 .popup form input{
     text-align: center;
     width: 100%;
-    padding: 15px;
+    padding: 10px;
+    border-radius: 10px;
     border: none;
-    border-bottom: 1px solid var(--biru-color);
 }
 .popup form input:focus{
     outline: none;
-    box-shadow: 0 2px 4px #6d9ff5af;
 }
 .popup form select{
     text-align: center;
-    width: 50%;
-    border: 3px solid var(--biru-color);
+    width: 100%;
+    padding: 9px;
+    border-radius: 10px;
     border: none;
-    border-bottom: 1px solid var(--biru-color);
 }
 .popup form select:focus{
     outline: none;
-    box-shadow: 0 2px 4px #6d9ff5af;
 }
-.action-saldo{
-    margin-top: 50px;
+.popup .action-saldo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 40px;
+    margin-top: 10px;
 }
 .action-saldo button{
     border: none;
@@ -181,22 +193,38 @@ textarea:focus{
     padding: 12px;
     border-radius: 20px;
     margin: 10px;
+    margin-top: 30px;
     padding: 10px 20px;
-}
-.popup .action-saldo {
-    margin-top: 10px;
-}
-#pemasukan{
-    background-color: var(--hijau-color);
-}
-#pengeluaran{
-    background-color: var(--merah-color);
 }
 .action-saldo #showPopupButton{
     background-color: var(--biru-color);
 }
+.action-submit{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.action-submit button{
+    background-color: var(--body-color);
+    color: var(--hitam-color);
+    border-radius: 30px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 700;
+}
+.action-submit button .negative{
+    color: red;
+}
+.action-submit button .positive{
+    color: var(--hijau-color);
+}
 
-@media screen and (max-width: 1027px){
+@media screen and (max-width: 1105px){
     .saldo-atas{
         flex-direction: column;
         gap: 10px;
@@ -213,6 +241,8 @@ textarea:focus{
     }
     .action-saldo{
         display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .action-saldo button{
         font-size: 3vw;
@@ -256,20 +286,22 @@ textarea:focus{
     .logout span{
         padding: 10px 30px;
     }
+    .action-submit button{
+        font-size: 3vw;
+    }
 }
 
-/* .rincian-container{
+.rincian-container{
     margin-top: 40px;
-    width: 70%;
-    background-color: var(--hijau-color);
+    width: 20%;
+    background-color: #f2f2f2;
     display: flex;
     justify-content: center;
     gap: 10px;
     padding: 5px ;
-    border-radius: 10px;
+    border-radius:50px;
 }
 .rincian{
-    color: var(--hijau-color);
     border-radius: 50px;
     text-align: center;
     width: 100%;
@@ -277,10 +309,21 @@ textarea:focus{
     padding: 1px;
     box-shadow: 0px 4px 4px 0px var(--shadow-color) ;
 }
+.rincian i{
+    font-size: 13px;
+}
+.rincian h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rincian a{
+    color: var(--hitam-color);
+}
 
-@media screen and (max-width: 760px){
+@media screen and (max-width: 830px){
     .rincian-container{
-        width: 95%;
+        width: 50%;
         align-items: center;
         border-radius: 40px;
     }
@@ -289,7 +332,7 @@ textarea:focus{
         border-radius: 30px;
     }
     
-} */
+}
 
 
 .saldo-table-container {
@@ -378,10 +421,12 @@ textarea:focus{
     font-size: 25px;
     font-weight: 700;
     margin-bottom: 20px;
+    color: var(--body-color);
 }
 .popup p{
     margin-top: 20px;
 }
+
 .popup-content {
     position: absolute;
     display: flex;
@@ -390,12 +435,12 @@ textarea:focus{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: var(--body-color);
+    background-color: var(--biru-color);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
-    width: 50%;
+    width: 30%;
     max-width: 80%; /* Lebar maksimum popup */
     max-height: 80%; /* Tinggi maksimum popup */
     overflow: auto; /* Tampilkan scrollbar jika kontennya terlalu besar */
@@ -407,12 +452,13 @@ textarea:focus{
     right: 10px;
     font-size: 24px;
     cursor: pointer;
+    color: var(--body-color);
 }
 
 /* Tambahkan gaya responsif */
-@media (max-width: 800px) {
+@media (max-width: 1300px) {
     .popup-content {
-        width: 100%;
+        width: 50%;
     }
     .popup-judul{
         font-size: 20px;
@@ -428,5 +474,156 @@ textarea:focus{
     .popup-judul{
         font-size: 20px;
         font-weight: 700;
+    }
+}
+
+
+/* ================= CSS RINCIAN =================== */
+
+.body-rincian{
+    margin: 20px;
+}
+#back{
+    display: flex;
+    justify-content: start;
+    width: 10%;
+    align-items: center;
+    color: var(--biru-color);
+}
+.total-now{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.total p{
+    font-size: 50px;
+    font-weight: 700;
+}
+.total h6{
+    font-weight: 400;
+    font-style: italic;
+    color: red;
+    font-size: 12px;
+}
+.total h6 button{
+    font-weight: 400;
+    font-style: italic;
+    color: blue;
+    font-size: 12px;
+    text-decoration: underline;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.card-inout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px var(--shadow-color) inset;
+    background-color: var(--body-color-2);
+    padding: 10px;
+    gap: 10px;
+    border-radius: 50px;
+}
+.card-inout span{
+    display: flex;
+    align-items: center;
+}
+.card-inout .in{
+    background-color: var(--body-color);
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+.card-inout .in i{
+    color: var(--hijau-color);
+}
+.card-inout .out{
+    background-color: var(--body-color);
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+.card-inout .out i{
+    color: var(--merah-color);
+}
+.rincian-table{
+    margin-top: 0px;
+    border: 1px solid rgba(0, 0, 0, 0.145);
+}
+.action-td{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.action-td button{
+    background: transparent;
+    border: none;
+    text-decoration: underline;
+}
+.action-td #edit{
+    color: var(--biru-color);
+}
+.action-td #delete{
+    color: var(--merah-color);
+}
+.kas-besar{
+    margin: 20px;
+    display: flex;
+    justify-content: end;
+
+}
+.kas-besar a{
+    display: flex;
+    align-items: center;
+    background-color: #5ACE00;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: var(--body-color);
+}
+@media (max-width: 1005px){
+    .total-now{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .total h6{
+        margin-bottom: 20px;
+    }
+    .kas-besar a{
+        white-space: nowrap;
+    }
+}
+@media (max-width: 768px){
+
+    .total span{
+        font-size: 4vw;
+    }
+    .total p{
+        text-align: center;
+        font-size: 7vw;
+        font-weight: 700;
+    }
+    .total h6{
+        margin-bottom: 20px;
+    }
+    .card-inout .in,
+    .card-inout .out{
+        padding: 5px 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 3vw;
+    }
+    .action-td{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+@media (max-width: 430px){
+    .total h6,
+    .total h6 button{
+        font-size: 3vw;
     }
 }
