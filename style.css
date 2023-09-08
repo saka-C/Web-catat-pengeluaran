@@ -176,10 +176,7 @@ a{
 
 @media screen and (max-width: 768px) {
     
-    .navbar{
-        background-color: var(--body-color);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-    }
+
     .navbar .line{
         background-color: var(--text-color);
     }
@@ -204,17 +201,8 @@ a{
     .nav-links.active {
         display: flex;
     }
-
     .burger {
         display: flex;
-    }
-    .profile{
-        display: none;
-    }
-    .drop-prof{
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(199, 204, 199);
     }
     #signup{
         color: var(--hitam-color);

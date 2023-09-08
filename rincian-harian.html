@@ -26,112 +26,165 @@
             </div>
         </div>
         <div class="kas-besar">
-            <a href="#"><i class='bx bx-plus icon'></i>Buat Kas Besar</a>
+            <a href="#"><i class='bx bx-plus icon'></i>Buat Kategori</a>
         </div>
     </div>
    
-    <div class="saldo-table-container rincian-table">
-        <table class="saldo-table ">
-                    <thead>
-                        <tr>
-                            <th>Tanggal</th>
-                            <th>Saldo<i class='bx bx-arrow-to-bottom icon positive'></i><i class='bx bx-arrow-from-bottom icon negative' ></i></th>
-                            <th>Keterangan</th>
-                            <th>
-                                <select name="" id="">
-                                    <option value="#">All</option>
-                                    <option value="#">Entertaiment</option>
-                                    <option value="#">Needed</option>
-                                    <option value="#">Bill</option>
-                                    <option value="#">Bonus</option>
-                                </select>
-                            </th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td >23/06/2023</td>
-                            <td class="positive"><i class='bx bx-arrow-to-bottom icon'></i>20.000</td>
-                            <td>dikasih mama</td>
-                            <td>Bonus</td>
-                            <td class="action-td">
-                                <button id="edit">Edit</button>
-                                <button id="delete">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>23/06/2023</td>
-                            <td class="negative"><i class='bx bx-arrow-from-bottom icon' ></i>10.000</td>
-                            <td>nongkrong beli kopi kenangan</td>
-                            <td>Entertaiment</td>
-                            <td class="action-td">
-                                <button id="edit">Edit</button>
-                                <button id="delete">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>23/06/2023</td>
-                            <td class="negative"><i class='bx bx-arrow-from-bottom icon' ></i>10.000</td>
-                            <td>nongkrong beli kopi kenangan</td>
-                            <td>Entertaiment</td>
-                            <td class="action-td">
-                                <button id="edit">Edit</button>
-                                <button id="delete">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td >23/06/2023</td>
-                            <td class="positive"><i class='bx bx-arrow-to-bottom icon'></i>20.000</td>
-                            <td>dikasih mama</td>
-                            <td>Bonus</td>
-                            <td class="action-td">
-                                <button id="edit">Edit</button>
-                                <button id="delete">Delete</button>
-                            </td>                  
-                        </tr>
-                        <tr>
-                            <td>23/06/2023</td>
-                            <td class="negative"><i class='bx bx-arrow-from-bottom icon' ></i>10.000</td>
-                            <td>nongkrong beli kopi kenangan</td>
-                            <td>Entertaiment</td>
-                            <td class="action-td">
-                                <button id="edit">Edit</button>
-                                <button id="delete">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>23/06/2023</td>
-                            <td class="negative"><i class='bx bx-arrow-from-bottom icon' ></i>10.000</td>
-                            <td>nongkrong beli kopi kenangan</td>
-                            <td>Entertaiment</td>
-                            <td class="action-td">
-                                <button id="edit">Edit</button>
-                                <button id="delete">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>23/06/2023</td>
-                            <td class="negative"><i class='bx bx-arrow-from-bottom icon' ></i>10.000</td>
-                            <td>nongkrong beli kopi kenangan</td>
-                            <td>Entertaiment</td>
-                            <td class="action-td">
-                                <button id="edit">Edit</button>
-                                <button id="delete">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>23/06/2023</td>
-                            <td class="negative"><i class='bx bx-arrow-from-bottom icon' ></i>10.000</td>
-                            <td>nongkrong beli kopi kenangan</td>
-                            <td>Entertaiment</td>
-                            <td class="action-td">
-                                <button id="edit">Edit</button>
-                                <button id="delete">Delete</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-        </div> 
+<!-- ================== TABLE RINCIAN ===================== -->
+<div class="saldo-table-container rincian-table">
+    <h2>Rincian</h2>
+    <table class="saldo-table ">
+        <thead>
+            <tr>
+                <th>Tanggal</th>
+                <th id="saldo-row"><span>Saldo</span>
+                    <span>
+                        <a href="#"><i class='bx bx-arrow-to-bottom icon positive'></i></a>
+                        <a href="#"><i class='bx bx-arrow-from-bottom icon negative' ></i></a>
+                    </span>
+                </th>
+                <th>Keterangan</th>
+                <th>
+                    <select name="" id="">
+                        <option value="#">All</option>
+                        <option value="#">Entertaiment</option>
+                        <option value="#">Needed</option>
+                        <option value="#">Bill</option>
+                        <option value="#">Bonus</option>
+                    </select>
+                </th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td >23/06/2023</td>
+                <td class="positive"><i class='bx bx-arrow-to-bottom icon'></i>20.000</td>
+                <td>dikasih mama</td>
+                <td>Bonus</td>
+                <td class="action-td">
+                    <button id="edit">Edit</button>
+                    <button id="delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>23/06/2023</td>
+                <td class="negative"><i class='bx bx-arrow-from-bottom icon' ></i>10.000</td>
+                <td>nongkrong beli kopi kenangan</td>
+                <td>Entertaiment</td>
+                <td class="action-td">
+                    <button id="edit">Edit</button>
+                    <button id="delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>23/06/2023</td>
+                <td class="negative"><i class='bx bx-arrow-from-bottom icon' ></i>10.000</td>
+                <td>nongkrong beli kopi kenangan</td>
+                <td>Entertaiment</td>
+                <td class="action-td">
+                    <button id="edit">Edit</button>
+                    <button id="delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td >23/06/2023</td>
+                <td class="positive"><i class='bx bx-arrow-to-bottom icon'></i>20.000</td>
+                <td>dikasih mama</td>
+                <td>Bonus</td>
+                <td class="action-td">
+                    <button id="edit">Edit</button>
+                    <button id="delete">Delete</button>
+                </td>                  
+            </tr>
+            <tr>
+                <td>23/06/2023</td>
+                <td class="negative"><i class='bx bx-arrow-from-bottom icon' ></i>10.000</td>
+                <td>nongkrong beli kopi kenangan</td>
+                <td>Entertaiment</td>
+                <td class="action-td">
+                    <button id="edit">Edit</button>
+                    <button id="delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>24/06/2023</td>
+                <td class="negative"><i class='bx bx-arrow-from-bottom icon' ></i>10.000</td>
+                <td>nongkrong beli kopi kenangan</td>
+                <td>Entertaiment</td>
+                <td class="action-td">
+                    <button id="edit">Edit</button>
+                    <button id="delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>24/06/2023</td>
+                <td class="negative"><i class='bx bx-arrow-from-bottom icon' ></i>10.000</td>
+                <td>nongkrong beli kopi kenangan</td>
+                <td>Entertaiment</td>
+                <td class="action-td">
+                    <button id="edit">Edit</button>
+                    <button id="delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>24/06/2023</td>
+                <td class="negative"><i class='bx bx-arrow-from-bottom icon' ></i>10.000</td>
+                <td>nongkrong beli kopi kenangan</td>
+                <td>Entertaiment</td>
+                <td class="action-td">
+                    <button id="edit">Edit</button>
+                    <button id="delete">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div> 
+<!-- ================== TABLE RINCIAN END ===================== -->
+
+<!-- ================== TABLE TOTAL ===================== -->
+<div class="saldo-table-container rincian-table table-total">
+    <h2>Total Pengeluaran</h2>
+    <table class="saldo-table ">
+        <thead>
+            <tr>
+                <th>Tanggal</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td >23/06/2023</td>
+                <td>Rp. 50.000,00</td>
+            </tr>
+            <tr>
+                <td>24/06/2023</td>
+                <td>Rp. 40.000,00</td>
+            </tr>
+        </tbody>
+    </table>
+</div> 
+<!-- ================== TABLE TOTAL END ===================== -->
+
+<!-- ================== TABLE CATATAN ===================== -->
+<div class="saldo-table-container rincian-table catatan">
+    <table class="saldo-table ">
+        <tbody>
+            <tr>
+                <td><a href="#">Ngopi</a></td>
+                <td id="last-update"><i class='bx bx-history icon'></i>terakhir diperbarui 24/06/2023</td>
+            </tr>
+            <tr>
+                <td><a href="#">Ngasih Orangtua</a></td>
+                <td id="last-update"><i class='bx bx-history icon'></i>terakhir diperbarui 24/06/2023</td>
+            </tr>
+            <tr>
+                <td><a href="#">Futsal</a></td>
+                <td id="last-update"><i class='bx bx-history icon'></i>terakhir diperbarui 24/06/2023</td>
+            </tr>
+        </tbody>
+    </table>
+</div> 
+<!-- ================== TABLE CATATAN END ===================== -->
 </body>
 </html>

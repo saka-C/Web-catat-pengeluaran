@@ -45,7 +45,12 @@
             <thead>
                 <tr>
                     <th>Tanggal</th>
-                    <th>Saldo<i class='bx bx-arrow-to-bottom icon positive'></i><i class='bx bx-arrow-from-bottom icon negative' ></i></th>
+                    <th id="saldo-row"><span>Saldo</span>
+                        <span>
+                            <a href="#"><i class='bx bx-arrow-to-bottom icon positive'></i></a>
+                            <a href="#"><i class='bx bx-arrow-from-bottom icon negative' ></i></a>
+                        </span>
+                    </th>
                     <th>Keterangan</th>
                     <th>
                         <select name="" id="">
@@ -99,14 +104,18 @@
         <div id="popupDetail"></div>
         <span class="popup-judul">Tambah Pemasukan/Pengeluaran</span>
         <form action="">
+            <span><input type="checkbox">Simpan Sebagai Pemasukan?</span>
             <div class="form-group">
-                <label for="">Jumlah Pemasukan/Pengeluaran</label>
-                <input type="number" placeholder="Masukan Nominalnya saja" >
+                <input type="number" placeholder="Masukan Nominalnya saja" required>
+            </div>
+            <div class="form-group ket">
+                <label for="">Keterangan</label>
+                <textarea name="" id="" required></textarea>
             </div>
             <div class="form-group">
-                <label for="">Jenis</label>
-                <select name="" id="">
-                    <option disabled selected value>Pilih Jenis Pengeluaran/Pemasukan</option>
+                <label for="">Kategori</label>
+                <select name="" id="" required>
+                    <option disabled selected value>Pilih Kategori Pengeluaran/Pemasukan</option>
                     <option value="#">All</option>
                     <option value="#">Entertaiment</option>
                     <option value="#">Needed</option>
@@ -114,14 +123,8 @@
                     <option value="#">Bonus</option>
                 </select>
             </div>
-            <div class="form-group ket">
-                <label for="">Keterangan</label>
-                <textarea name="" id="" ></textarea>
-            </div>
-            <span>Simpan Sebagai?</span>
             <div class="action-submit">
-                <button id="pemasukan"><i class='bx bx-arrow-to-bottom icon positive'></i>Pemasukan</button>
-                <button id="pengeluaran"><i class='bx bx-arrow-from-bottom icon negative' ></i>Pengeluaran</button>
+                <button type="submit">Submit</button>
             </div>
         </form>
         
