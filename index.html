@@ -3,69 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./asset/logo-neo1.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <title>Catat Pengeluaran keuangan</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="asset/logo-ui.png" type="image/x-icon" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>Laporkan Masalah & Inventory Perangkat Fakultas</title>
 </head>
 <body>
-    <!-- ================================ Navbar ======================================
-===========================================================================  -->
-<nav class="navbar">
-    <div class="logo">
-        <img src="./asset/neoone-logo-properties.png" alt="">
-        
-    </div>
-    <div class="con-nav-prof">
-        <div class="nav-links">
-            <a href="#" id="signup">Sign Up</a> 
-            <a href="#" id="login">Login</a>                  
+    <div class="container-header">
+        <div class="navbar">
+            <div class="logo">
+                <div class="logo-image"><img src="asset/logo-ui.png" alt=""></div>
+                <p>|</p>
+                <div class="logo-text">Fakultas Psikologi</div>
+            </div>
+            <div class="navlink">
+                <a href="dashboard.html">Login</a>
+            </div>
         </div>
-        <div class="burger">
-            <a href="#" id="signup">Sign Up</a> 
-        </div>
+        <div class="text-header"><h1>Laporkan Kendala & Inventory Perangkat Fakultas</h1></div>
     </div>
+    <div class="garis">
+        <p class="opacity">.</p>
+        <div class="card">
+            <button id="report-popup">
+                <i class='bx bxs-message-detail'></i>
+                <p>Lapor Kendala</p>
+            </button>
+            <button>
+                <i class="ph-fill ph-desktop-tower"></i>
+                <p>Inventory Fakultas</p>
+            </button>
+            <button id="ticket-popup">
+                <i class="ph-fill ph-ticket"></i>
+                <p>Tiket Laporan Anda</p>
+            </button>
+        </div>      
+    </div>
+    <div class="container-content">
+        <div class="thumbnail">
+            <div class="thumbnail-img">
+                <img src="asset/thumbnail1.png" alt="">
+            </div>
+            <div class="thumbnail-text">
+                <h2>Punya kendala Pada Device Kamu? Mau Ngecek Spesifikasi Perangkat Fakultas?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur. Pellentesque elementum purus lectus lacinia. Quis gravida diam convallis nunc cursus ornare sem amet malesuada.</p>
+                <a href="erorpage.html">Selengkapnya..</a>
+            </div>
+        </div>
+        <div class="antrian">
+            <div class="table-container">
+                <h1>Laporan Masuk Hari Ini</h1>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Dosen</td>
+                            <td>Masalah Jaringan</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Karyawan</td>
+                            <td>Masalah Jaringan</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Mahasiswa</td>
+                            <td>Masalah Jaringan</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Mahasiswa</td>
+                            <td>Masalah Jaringan</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Mahasiswa</td>
+                            <td>Masalah Jaringan</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Mahasiswa</td>
+                            <td>Masalah Jaringan</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Mahasiswa</td>
+                            <td>Masalah Jaringan</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Mahasiswa</td>
+                            <td>Masalah Jaringan</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Mahasiswa</td>
+                            <td>Masalah Jaringan</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Mahasiswa</td>
+                            <td>Masalah Jaringan</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Mahasiswa</td>
+                            <td>Masalah Jaringan</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="antrian-image">
+                <img src="asset/thumbnail2.png" alt="">
+            </div>
+        </div>
+
+
+<div class="report-card-popup">
+    <div class="report-card">
+        <form action="">
+            <div class="top-popup">
+                <span>Lengkapi form masalah!</span>
+                <button class="btn-close" id="close-report-popup">&times;</button>
+            </div>
+            <select>
+                <option value="#">A-107</option>
+                <option value="#">A-108</option>
+                <option value="#">A-109</option>
+            </select>
+            <select>
+                <option value="#">Masalah Jaringan</option>
+                <option value="#">Device Mati</option>
+                <option value="#">Rusak</option>
+            </select>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <div class="btn-card-popup">
+                <button>Laporkan❗</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div class="device-card">
     
-</nav>
-<!-- ================================ Navbar end ================================
-===========================================================================  -->
-
-<!-- ============================ Thumnail =================================
-===========================================================================  -->
-<div class="thumnail">
-    <div class="thumnail-gambar">
-        <img src="asset/thumnail-keuangan.png" alt="">
-    </div>
-    <div class="thumnail-text">
-        <span>Kamu Ngerasa Pengeluaran Bulananmu Cepat Habis? </span>
-        <p>Kamu bisa catat pengeluaran keuangan kamu disini secara mendetail dan rasakan manfaatnya</p>
-        <a href="dashboard.html">Coba Sekarang</a>
-        <a href="#" id="login-add">Login</a>
-    </div>
 </div>
-
-<!-- ============================ Thumnail end =================================
-===========================================================================  -->
-
-<!-- ============================ footer =================================
-===========================================================================  -->
-<footer class="footer">
-    <div class="footer-logo">
-        <img src="./asset/neoone-logo-properties.png" alt="Logo">
-        <div class="logo-text">
+<div class="ticket-card-popup">
+    <div class="ticket-card">
+        <div class="top-popup">
+            <button class="btn-close" id="close-ticket-popup">&times;</button>
+        </div>
+        <div class="top-ticket">
+            <span class="id-ticket">9803179</span>
+            <span class="date-ticket">23/08/2012</span>
+        </div>
+        <div class="mid-ticket">
+            <div class="left-ticket">
+                <span>Nama: <p>Shaka Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis.</p></span>
+                <span>Role: <p>Dosen</p></span>
+                <span>Ruangan: <p>A103</p></span>
+            </div>
+            <div class="right-ticket">
+                <div class="line-cut"></div>
+                <div>
+                    <span class="problem-ticket">Masalah Jaringan</span>
+                    <div class="desc-problem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, quo ad repellendus eos a perspiciatis, iusto mollitia, culpa harum dolor provident neque voluptates accusantium itaque earum eligendi repellat velit? Possimus, corrupti maxime aspernatur quaerat qui ab fugit officiis iusto dolorem id earum repellat, modi voluptatem tenetur officia iure rem eum!</div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="footer-credit">
-        <a href="https://www.instagram.com/neo1.indonesia/" id="ig"><i class='bx bxl-instagram' ></i> Instagram</a>
-        <a href="https://github.com/saka-C" id="github"><i class='bx bxl-github'></i> Creator Github</a>
-        <a href="https://github.com/NeoOne-Team" id="github"><i class='bx bxl-github'></i> Community Team Github</a>
-    </div>
-</footer>
-<div class="footer-copyright">
-    <p>© 2023 WEB. All rights reserved.</p>
 </div>
-<!-- ========================== End footer =================================
-===========================================================================  -->
 
-<script src="script.js"></script>
+    </div>
+
+<!-- <script src="style/script.js"></script> -->
+<script>
+    const Report = document.getElementById("report-popup");
+    const Ticket = document.getElementById("ticket-popup");
+    const reportPopup = document.querySelector(".report-card-popup");
+    const ticketPopup = document.querySelector(".ticket-card-popup");
+    const closeBtn1 = document.getElementById("close-report-popup");
+    const closeBtn2 = document.getElementById("close-ticket-popup");
+
+    Report.addEventListener("click", () => {
+    reportPopup.classList.add("active");
+    });
+
+    Ticket.addEventListener("click", () => {
+    ticketPopup.classList.add("active");
+    });
+
+
+    closeBtn1.addEventListener("click",() =>{
+    reportPopup.classList.remove("active");
+    });
+    closeBtn2.addEventListener("click",() =>{
+    ticketPopup.classList.remove("active");
+    });
+</script>
 </body>
 </html>
